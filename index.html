@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    body {
+      background-color: yellow;
+    }
+    .button-container {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+    }
+    .button {
+      width: 100px;
+      height: 100px;
+      border-radius: 50%;
+      background-color: white;
+      text-align: center;
+      line-height: 100px;
+      cursor: pointer;
+    }
+    .counter {
+      text-align: center;
+      font-size: 24px;
+      margin-top: 50px;
+    }
+  </style>
+</head>
+<body>
+  <div class="button-container">
+    <div class="button" id="clickButton">Click</div>
+  </div>
+  <div class="counter" id="scoreCounter">Score: 0</div>
+
+  <script>
+    var score = 0;
+    var clickButton = document.getElementById("clickButton");
+    var scoreCounter = document.getElementById("scoreCounter");
+
+    clickButton.addEventListener("click", function() {
+      score++;
+      scoreCounter.textContent = "Score: " + score;
+    });
+  </script>
+</body>
+</html>
